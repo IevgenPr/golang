@@ -30,8 +30,13 @@ func main() {
 	fmt.Println("\nName after...")
 	printVar(name)
 
-	fmt.Println(">>> Passing arguments by reference ")
+	fmt.Println("\n\n>>> Passing arguments by reference ")
 
+	fmt.Println("\nName before..")
+	printVar(name)
+	changeNameByRef(&name)
+	fmt.Println("\nName after...")
+	printVar(name)
 }
 
 // function names that start with lowercase - are private within a module
@@ -46,4 +51,11 @@ func changeName(name string) string {
 	fmt.Println("\nName inside...")
 	printVar(name)
 	return name
+}
+
+func changeNameByRef(name *string) string {
+	*name = "Another name"
+	fmt.Println("name inside: ")
+	printVar(*name)
+	return *name
 }
