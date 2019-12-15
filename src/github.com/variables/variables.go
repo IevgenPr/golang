@@ -17,6 +17,8 @@ func main() {
 
 	ptr := &num //pointer to address of num
 
+	const constString = "Constant String"
+
 	printVar(name)
 	printVar(intnum)
 	fmt.Println("Name is ", name, " type: ", reflect.TypeOf(name))
@@ -37,6 +39,9 @@ func main() {
 	changeNameByRef(&name)
 	fmt.Println("\nName after...")
 	printVar(name)
+
+	printVar(constString)
+	constString = "test"
 }
 
 // function names that start with lowercase - are private within a module
