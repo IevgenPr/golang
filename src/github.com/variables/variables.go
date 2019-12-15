@@ -22,6 +22,16 @@ func main() {
 	fmt.Println("Name is ", name, " type: ", reflect.TypeOf(name))
 	fmt.Println("num: ", num, " type: ", reflect.TypeOf(num))
 	printVar(*ptr) // here pointer is dereferenced
+
+	fmt.Println(">>> Passing arguments by value ")
+	fmt.Println("\nName before..")
+	printVar(name)
+	changeName(name)
+	fmt.Println("\nName after...")
+	printVar(name)
+
+	fmt.Println(">>> Passing arguments by reference ")
+
 }
 
 // function names that start with lowercase - are private within a module
@@ -29,4 +39,11 @@ func main() {
 func printVar(x interface{}) string {
 	fmt.Println("x: ", x, " type: ", reflect.TypeOf(x))
 	return "0"
+}
+
+func changeName(name string) string {
+	name = "Some name"
+	fmt.Println("\nName inside...")
+	printVar(name)
+	return name
 }
