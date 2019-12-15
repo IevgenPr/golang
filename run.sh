@@ -1,3 +1,1 @@
-export GOPATH=/Users/ipr/src/golang/HelloWorld
-
-go run src/Pluralsight/hello-world.go
+GOPATH=$(pwd) go run src/HelloWorld/variables.go
