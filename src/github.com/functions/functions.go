@@ -5,6 +5,10 @@ import (
 	"strings"
 )
 
+var (
+	isDisabled, isSet bool
+)
+
 func main() {
 	name := "beautiful go"
 	author := "smart guy"
@@ -13,6 +17,10 @@ func main() {
 
 	bestScore := bestLeagueScore(13, 14, 2, 5, 8, 1)
 	fmt.Println("Best score:", bestScore)
+	fmt.Println(isSet, isDisabled)
+	setVarsDefaults()
+	fmt.Println(isSet, isDisabled)
+
 }
 
 func convert(s1, s2 string) (st1, st2 string) {
@@ -29,4 +37,9 @@ func bestLeagueScore(finishes ...int) int {
 		}
 	}
 	return best
+}
+
+func setVarsDefaults() {
+	isDisabled = true
+	isSet = false
 }
