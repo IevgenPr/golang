@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"reflect"
 )
 
@@ -41,7 +42,9 @@ func main() {
 	printVar(name)
 
 	printVar(constString)
-	constString = "test"
+	//cannot do that  - asssign to const - verified by compiler
+	//constString = "test"
+	fmt.Println("Evironment variables:\n", os.Environ())
 }
 
 // function names that start with lowercase - are private within a module
