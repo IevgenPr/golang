@@ -18,15 +18,20 @@ func main() {
 	// default: <code>
 	// }
 	msg := ""
-	switch "docker" {
+	switch "linux" {
 	case "docker":
 		msg = "Here Docker courses.."
+		fmt.Println(msg)
 	case "linux":
 		msg = "Here Linux courses.."
+		fmt.Println(msg)
+		fallthrough
 	case "windows":
 		msg = "Here Windows courses.."
+		fmt.Println(msg)
 	default:
 		msg = "Sorry, didnt find a match.."
+		fmt.Println(msg)
 	}
-	fmt.Println(msg)
+	// fmt.Println(msg)
 }
