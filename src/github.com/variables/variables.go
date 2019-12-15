@@ -44,7 +44,10 @@ func main() {
 	printVar(constString)
 	//cannot do that  - asssign to const - verified by compiler
 	//constString = "test"
-	fmt.Println("Evironment variables:\n", os.Environ())
+	fmt.Println("\nEnvironment variables:")
+	for _, env := range os.Environ() {
+		fmt.Println(env)
+	}
 }
 
 // function names that start with lowercase - are private within a module
