@@ -12,8 +12,8 @@ func main() {
 	fmt.Println(convert(name, author))
 }
 
-func convert(name, author string) (s1, s2 string) {
-	name = strings.Title(name)
-	author = strings.ToUpper(author)
-	return name, author
+func convert(s1, s2 string) (st1, st2 string) {
+	s1 = strings.Title(s1)
+	s2 = strings.ToUpper(s2)
+	return s1, s2
 }
