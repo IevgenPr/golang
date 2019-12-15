@@ -20,6 +20,9 @@ func main() {
 	fmt.Println(isSet, isDisabled)
 	setVarsDefaults()
 	fmt.Println(isSet, isDisabled)
+	//https://tour.golang.org/basics/7
+	x1, y1 := namedVars()
+	fmt.Println(x1, y1)
 
 }
 
@@ -42,4 +45,10 @@ func bestLeagueScore(finishes ...int) int {
 func setVarsDefaults() {
 	isDisabled = true
 	isSet = false
+}
+
+func namedVars() (x, y int) {
+	x = 10
+	y = 5
+	return
 }
