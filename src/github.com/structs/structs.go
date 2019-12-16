@@ -18,5 +18,7 @@ func main() {
 		Rating: 5,
 	}
 	fmt.Println(DockerDeepDive)
+	DockerDeepDive.Rating = 1
 	fmt.Printf("Course author: %s\n", DockerDeepDive.Author)
+	fmt.Printf("Course raiting: %.1f\n", DockerDeepDive.Rating)
 }
