@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+
 	// slice - unordered list
 	coursesInProg := []string{
 		"Docker deep dive",
@@ -14,6 +15,19 @@ func main() {
 		"Puppet fundamentals",
 	}
 
+	for timer := 10; timer >= 0; timer-- {
+		if timer == 0 {
+			fmt.Println("Boom!")
+			//continue
+			break
+
+	for timer := 3; timer >= 0; timer-- {
+		if timer == 0 {
+			fmt.Println("Ka boom!")
+			//continue
+			break
+
+
 	for i, course := range coursesInProg {
 		fmt.Println(i, course)
 		for _, completed := range coursesCompleted {
@@ -22,4 +36,7 @@ func main() {
 			}
 		}
 	}
+	//make slice
+	courses := make([]string, 10, 20)
+	fmt.Printf("len %d, cap %d\n", len(courses), cap(courses))
 }
