@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"sync"
 	"time"
 )
 
 func main() {
+	runtime.GOMAXPROCS(2)
 	var waitGrp sync.WaitGroup
 	waitGrp.Add(2)
 
