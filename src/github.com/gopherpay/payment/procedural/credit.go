@@ -15,7 +15,6 @@ func PayWithCredit(card *CreditCard, amount float32) bool {
 	if card.AvailableCredit > amount {
 		card.AvailableCredit -= amount
 		return true
-	} else {
-		return false
 	}
+	return false
 }

@@ -1,5 +1,6 @@
 package procedural
 
+//CheckingAccount blah
 type CheckingAccount struct {
 	AccountOwner  string
 	RoutingNumber string
@@ -7,11 +8,11 @@ type CheckingAccount struct {
 	Balance       float32
 }
 
+//PayWithCheck blah
 func PayWithCheck(account *CheckingAccount, amount float32) bool {
 	if account.Balance > amount {
 		account.Balance -= amount
 		return true
-	} else {
-		return false
 	}
+	return false
 }
