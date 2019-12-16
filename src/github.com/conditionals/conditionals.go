@@ -1,37 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main() {
-	if firstRank, secondRank := "678", "39"; firstRank < secondRank {
-		fmt.Println("First is doing better")
-	} else if firstRank == secondRank {
-		fmt.Println("First is equals" +
-			" to second")
-	} else {
-		fmt.Println("Second is doing better")
-	}
 
-	// switch <simple expr>; <condition>{
-	// case <expr>: <code>
-	// case <expr>: <code>
-	// default: <code>
-	// }
-	msg := ""
-	switch "linux" {
-	case "docker":
-		msg = "Here Docker courses.."
-		fmt.Println(msg)
-	case "linux":
-		msg = "Here Linux courses.."
-		fmt.Println(msg)
-		fallthrough
-	case "windows":
-		msg = "Here Windows courses.."
-		fmt.Println(msg)
-	default:
-		msg = "Sorry, didnt find a match.."
-		fmt.Println(msg)
+	switch tmpNum := random(); tmpNum {
+	case 0, 2, 4, 6, 8:
+		fmt.Println("even", tmpNum)
+	case 1, 3, 5, 7, 9:
+		fmt.Println("odd", tmpNum)
+
 	}
-	// fmt.Println(msg)
+}
+
+func random() int {
+	rand.Seed(time.Now().Unix())
+	return rand.Intn(10) //pseudo random between 0 and 10
 }
