@@ -2,22 +2,14 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
+	"os"
 )
 
 func main() {
-
-	switch tmpNum := random(); tmpNum {
-	case 0, 2, 4, 6, 8:
-		fmt.Println("even", tmpNum)
-	case 1, 3, 5, 7, 9:
-		fmt.Println("odd", tmpNum)
-
+	//here open function returns error as last argument
+	_, err := os.Open("somepath")
+	// nil here is success
+	if err != nil {
+		fmt.Println("there was error opening file", err)
 	}
-}
-
-func random() int {
-	rand.Seed(time.Now().Unix())
-	return rand.Intn(10) //pseudo random between 0 and 10
 }
