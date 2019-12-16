@@ -20,13 +20,16 @@ func main() {
 			fmt.Println("Boom!")
 			//continue
 			break
+		}
+	}
 
 	for timer := 3; timer >= 0; timer-- {
 		if timer == 0 {
 			fmt.Println("Ka boom!")
 			//continue
 			break
-
+		}
+	}
 
 	for i, course := range coursesInProg {
 		fmt.Println(i, course)
