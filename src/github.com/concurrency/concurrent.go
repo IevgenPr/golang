@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	runtime.GOMAXPROCS(2)
+	runtime.GOMAXPROCS(2) // execute in 2 parallel processes
 	var waitGrp sync.WaitGroup
 	waitGrp.Add(2)
 
