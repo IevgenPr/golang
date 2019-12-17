@@ -1,5 +1,6 @@
-//go test github.com/gopherpay/payment/procedural
 package procedural
+
+//go test github.com/gopherpay/payment/procedural -v
 
 import "testing"
 
