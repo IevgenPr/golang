@@ -15,6 +15,16 @@ func CreateCheckingAccount(
 		accountOwner:  accountOwner,
 		routingNumber: routingNumber,
 		accountNumber: accountNumber,
-		balance:       0.0,
+		balance:       0.0, // should come from a web service
 	}
+}
+
+// ProcessPayment blah
+func (c CheckingAccount) ProcessPayment(amount float32) bool {
+	return true
+}
+
+// Balance blah
+func (c CheckingAccount) Balance() float32 {
+	return c.balance
 }
