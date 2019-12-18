@@ -2,9 +2,15 @@ package payment
 
 import (
 	"errors"
+	"fmt"
 	"regexp"
 	"time"
 )
+
+// PaymentOption is a common interface for various options.
+type PaymentOption interface {
+	ProcessPayment(float32) bool
+}
 
 // CreditCard blah
 type CreditCard struct {
@@ -28,6 +34,12 @@ func CreateCreditAccount(
 		securityCode:    securityCode,
 		availableCredit: 5000.0,
 	}
+}
+
+// ProcessPayment blah
+func (CreditCard) ProcessPayment(amount float32) bool {
+	fmt.Println("Processing a credit card payment...")
+	return true
 }
 
 // OwnerName blah
@@ -91,6 +103,8 @@ func (c CreditCard) SetSecurityCode(value int) error {
 }
 
 // AvailableCredit blah
+// blah1
+// blah2
 func (c CreditCard) AvailableCredit() float32 {
 	return 5000.
 }
