@@ -8,6 +8,7 @@ import (
 )
 
 // PaymentOption is a common interface for various options.
+// CreditCard and Cash structs implement method of this interface
 type PaymentOption interface {
 	ProcessPayment(float32) bool
 }
