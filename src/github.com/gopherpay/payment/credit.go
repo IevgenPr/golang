@@ -4,15 +4,15 @@ package payment
 import "fmt"
 
 // CreditAccount blah
-type CreditAccount struct{}
+type CreditAccount1 struct{}
 
-func (c *CreditAccount) processPayment(amount float32) {
+func (c *CreditAccount1) processPayment(amount float32) {
 	fmt.Println("Processing credit transaction")
 }
 
 //CrCreditAccount uses named channel to accept amounts to charge
-func CrCreditAccount(chargeCh chan float32) *CreditAccount {
-	creditAccount := &CreditAccount{}
+func CrCreditAccount(chargeCh chan float32) *CreditAccount1 {
+	creditAccount := &CreditAccount1{}
 	//// go routine listening to changes on that channel
 	go func(chargeCh chan float32) {
 		for amount := range chargeCh {
