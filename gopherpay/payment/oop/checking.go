@@ -15,7 +15,7 @@ func CreateCheckingAccount(
 		accountOwner:  accountOwner,
 		routingNumber: routingNumber,
 		accountNumber: accountNumber,
-		balance:       0.0, // should come from a web service
+		balance:       500.0, // should come from a web service
 	}
 }
 

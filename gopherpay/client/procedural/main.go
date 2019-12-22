@@ -13,7 +13,7 @@ func main() {
 	fmt.Println("Paying with cash")
 	procedural.PayWithCash(amount)
 
-	fmt.Println(strings.Repeat("-", 10), "\n\n")
+	fmt.Println(strings.Repeat("-", 10))
 
 	credit := &procedural.CreditCard{
 		OwnerName:       "Debra Ingram",
@@ -28,7 +28,7 @@ func main() {
 	procedural.PayWithCredit(credit, amount)
 	fmt.Printf("Balance now:  %.2f\n", credit.AvailableCredit)
 
-	fmt.Println(strings.Repeat("-", 10), "\n\n")
+	fmt.Println(strings.Repeat("-", 10))
 
 	checkingAccount := &procedural.CheckingAccount{
 		AccountOwner:  "Debra Ingram",
@@ -42,6 +42,6 @@ func main() {
 	procedural.PayWithCheck(checkingAccount, amount)
 	fmt.Printf("Balance now:  %.2f\n", checkingAccount.Balance)
 
-	fmt.Println(strings.Repeat("-", 10), "\n\n")
+	fmt.Println(strings.Repeat("-", 10))
 
 }
