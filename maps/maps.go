@@ -31,9 +31,10 @@ func main() {
 
 }
 
-func printMap(m *map[string]int) {
+func printMap(m *map[string]int) *map[string]int {
 	fmt.Println("----")
 	for k, v := range *m {
 		fmt.Printf("Key %v, Value %v\n", k, v)
 	}
+	return m
 }
