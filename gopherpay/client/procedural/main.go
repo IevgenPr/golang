@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gopherpay/payment/procedural"
+	"gopherpay/payment/procedural"
 )
 
 func main() {
