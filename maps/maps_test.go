@@ -11,7 +11,7 @@ func TestMaps(t *testing.T) {
 			want := map[string]int{"a": 1}
 			got := printMap(&want)
 
-			if got == &want {
+			if got != &want {
 				t.Errorf("printMap want/got \n%w \n%w", want, got)
 			}
 
