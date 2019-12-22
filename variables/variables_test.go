@@ -17,15 +17,16 @@ func TestVariables(t *testing.T) {
 	t.Run("Test one function",
 		func(t *testing.T) {
 			got := printVar(0)
-			if got != "00" {
+			if got != "0" {
 				t.Errorf("printVar expects 0 = %w", got)
 			}
 		})
 	t.Run("Test another function",
 		func(t *testing.T) {
 			got := changeName("blah")
-			if got != "blah" {
-				t.Errorf("printVar expects blah = %w", got)
+			want := "blah, what a name!"
+			if got != want {
+				t.Errorf("printVar want/got \n%w \n%w", want, got)
 			}
 		})
 }

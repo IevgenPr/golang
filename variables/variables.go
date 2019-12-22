@@ -63,7 +63,7 @@ func printVar(x interface{}) string {
 }
 
 func changeName(name string) string {
-	name = "Some name"
+	name += ", what a name!"
 	fmt.Println("\nName inside...")
 	printVar(name)
 	return name
