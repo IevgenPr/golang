@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gopherpay/payment"
+	"github.com/IevgenPr/golang/gopherpay/payment"
 )
 
 // PaymentOption is a common interface for various options.
