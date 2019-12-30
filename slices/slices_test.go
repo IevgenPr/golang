@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestVariables(t *testing.T) {
+func TestSlices(t *testing.T) {
 
 	t.Run("Lazy",
 		func(t *testing.T) {
