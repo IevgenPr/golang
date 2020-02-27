@@ -6,10 +6,13 @@ import (
 	"math"
 )
 
+// These are all iterator patterns in golang
+// https://ewencp.org/blog/golang-iterators/index.html
 // this is closure which takes two functions and returns third function
 // and it is important to have opening brace with func keyword on the same line - whaaaat?
 // well, you can insert a semicolon - that is fine )))
 // well, you can put newline after opening brace )))
+//https://www.calhoun.io/what-is-a-closure/
 func Compose(
 	f, g func(
 		x float64) float64) func(
