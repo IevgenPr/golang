@@ -1,4 +1,4 @@
-package main
+package simple_loadbalancer
 
 import (
 	"fmt"
@@ -50,6 +50,6 @@ func (out chan *Work) receiveLotsOfResults() {
 
 }
 
-func main() {
+func simpeLb() {
 	Run()
 }

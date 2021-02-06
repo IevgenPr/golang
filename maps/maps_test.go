@@ -12,7 +12,7 @@ func TestMaps(t *testing.T) {
 			got := printMap(&want)
 
 			if got != &want {
-				t.Errorf("printMap want/got \n%w \n%w", want, got)
+				t.Errorf("printMap want/got \n%v \n%v", want, got)
 			}
 
 		})

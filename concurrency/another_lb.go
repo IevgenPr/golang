@@ -1,4 +1,4 @@
-package main
+package loadbalancer_another
 
 import (
 	"math/rand"
@@ -29,11 +29,11 @@ func (w *Worker) work(done chan *Worker) {
 func requestor(work chan<- Request) {
 	c := make(chan int)
 	for {
-		time.Sleep(rand.Int63n(nWorker * 2)) //Int54n
+		time.Sleep(time.Duration(rand.Int63n(*Worker*2)) * time.Second) //Int54n
 		work <- Request{workFn, c}
 		result := <-c
 		//furtherProcess(result)
 	}
 }
 
-func main() {}
+func another_lb() {}

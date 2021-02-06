@@ -9,7 +9,7 @@ func TestVariables(t *testing.T) {
 
 			want := courseMeta{"Nice Fellow", "Intermediate", 5}
 			if DockerDeepDive != want {
-				t.Errorf("printVar want/got \n%w \n%w", want, DockerDeepDive)
+				t.Errorf("printVar want/got \n%v \n%v", want, DockerDeepDive)
 			}
 		})
 }

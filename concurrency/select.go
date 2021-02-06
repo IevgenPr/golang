@@ -1,4 +1,4 @@
-package main
+package select_
 
 // This is sample from Rob Pike preso https://talks.golang.org/2012/waza.slide#35
 import (
@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func main() {
+func select_() {
 	timerChan := make(chan time.Time)
 	fmt.Println("Starting go routine at", time.Now())
 	rand.Seed(time.Now().UnixNano()) // seed with current time to get rand working
