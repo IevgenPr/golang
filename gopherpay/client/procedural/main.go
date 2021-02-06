@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/IevgenPr/golang/gopherpay/payment/procedural"
+	"github.com/tdrgr/golang/gopherpay/payment/procedural"
 )
 
 func main() {
