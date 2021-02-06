@@ -1,4 +1,4 @@
-package main
+package timer
 
 // This is sample from Rob Pike preso
 import (
@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func main() {
+func timer() {
 	timerChan := make(chan time.Time)
 	fmt.Println("Starting go routine at", time.Now())
 	rand.Seed(time.Now().UnixNano()) // seed with current time to get rand working
