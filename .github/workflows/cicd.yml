@@ -3,13 +3,13 @@ on:
   push: 
     branches: 
     — master 
-#    — staging
-#    — develop 
+    #    — staging
+    #    — develop 
   pull_request: 
     branches: 
     — master 
-#    — staging 
-#    — develop
+    #    — staging 
+    #    — develop
 
 jobs:
   build:
