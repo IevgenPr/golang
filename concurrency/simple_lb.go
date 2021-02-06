@@ -1,4 +1,4 @@
-package simple_loadbalancer
+package timer //simpleloadbalancer
 
 import (
 	"fmt"

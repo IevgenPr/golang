@@ -1,4 +1,4 @@
-package main
+package timer
 
 // This is sample from Rob Pike preso
 import (

@@ -29,7 +29,7 @@ func (w *Worker) work(done chan *Worker) {
 func requestor(work chan<- Request) {
 	c := make(chan int)
 	for {
-		time.Sleep(time.Duration(rand.Int63n() * time.Millisecond)(nWorker * 2)) //Int54n
+		time.Sleep(time.Duration(rand.Int63n()) * time.Millisecond)(Worker * 2) //Int54n
 		work <- Request{workFn, c}
 		result := <-c
 		//furtherProcess(result)
