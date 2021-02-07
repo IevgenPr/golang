@@ -2,14 +2,10 @@ name: CICD
 on: 
   push: 
     branches: 
-    — master 
-  #    — staging
-  #    — dev
+    — master
   pull_request: 
     branches: 
     — master 
-  #    — staging 
-  #    — dev
 
 jobs:
   build:
