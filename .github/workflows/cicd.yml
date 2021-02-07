@@ -1,16 +1,11 @@
 name: CICD
-on: 
-  push: 
-    branches: 
-    — master 
-  #    — staging
-  #    — dev
-  pull_request: 
-    branches: 
-    — master 
-  #    — staging 
-  #    — dev
-
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
 jobs:
   build:
     runs-on: ubuntu-latest
