@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/ipr0/golang/models"
+)
 
 func main() {
-	fmt.Println("Hello world?")
+	u := models.User{
+		ID:        2,
+		FirstName: "Trisha",
+		LastName:  "McMillan",
+	}
+	fmt.Println(u)
+	// go run .
+	//go run github.com/ipr0/golang - fully qualified invocation
 }

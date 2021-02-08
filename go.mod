@@ -1,3 +1,3 @@
-module github.com/ipr0/golang21
+module github.com/ipr0/golang
 
 go 1.15
