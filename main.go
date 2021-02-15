@@ -1,18 +1,13 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
 
-	"github.com/ipr0/golang/models"
+	"github.com/ipr0/golang/controllers"
 )
 
 func main() {
-	u := models.User{
-		ID:        2,
-		FirstName: "Trisha",
-		LastName:  "McMillan",
-	}
-	fmt.Println(u)
-	// go run .
-	//go run github.com/ipr0/golang - fully qualified invocation
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3000", nil) // starts server
+
 }
