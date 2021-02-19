@@ -15,6 +15,9 @@ type User struct {
 var (
 	users  []*User // slice holds pointers to users
 	nextID = 1
+	// ErrBadUser error
+	ErrBadUser = errors.New("New user must not include ID or it must be" +
+		" set to zero, or empty user data provided.")
 )
 
 // GetUsers returns all users
@@ -24,9 +27,8 @@ func GetUsers() []*User {
 
 // AddUser Adds user to a slice
 func AddUser(u User) (User, error) {
-	if u.ID != 0 {
-		return User{}, errors.New("New user must not include ID" +
-			"or it must be set to zero.")
+	if u.ID != 0 || (len(u.FirstName) == 0 && len(u.LastName) == 0) {
+		return User{}, ErrBadUser
 	}
 	u.ID = nextID
 	nextID++

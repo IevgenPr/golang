@@ -26,7 +26,7 @@ jobs:
         go vet . 
         golint .  
     - name: Run tests.
-      run: cd test && go test -v
+      run: go test -v ./tests
     - name: Send slack notification
       uses: 8398a7/action-slack@v3
       with:
